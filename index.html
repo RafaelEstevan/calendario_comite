@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendário 2026 - Comitê de Área MT</title>
+<style>
+    /* Fundo da "Mesa" */
+    body {
+        background-color: #e8e8e8;
+        font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        margin: 0;
+    }
+
+    /* O Bloco de Notas */
+    .notepad {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 800px;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.1); 
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    /* Barra Superior */
+    .header-bar {
+        background-color: #0072C6; /* Azul Al-Anon */
+        color: white;
+        padding: 35px 20px;
+        text-align: center;
+        border-bottom: 5px solid #005a9e;
+        position: relative;
+    }
+
+    .header-bar h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    /* Corpo do Papel */
+    .paper-content {
+        padding: 40px 50px; /* Margens laterais */
+        background-color: white;
+    }
+
+    /* Blocos dos Meses */
+    .month-block {
+        margin-bottom: 30px;
+        border-left: 4px solid #0072C6;
+        padding-left: 15px;
+    }
+
+    .month-name {
+        background-color: #0072C6;
+        color: white;
+        display: inline-block;
+        padding: 6px 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 16px;
+        border-radius: 0 4px 4px 0;
+        margin-bottom: 10px;
+    }
+
+    /* Lista de Eventos */
+    .event-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .event-item {
+        display: flex;
+        padding: 8px 0;
+        border-bottom: 1px dashed #cccccc;
+        align-items: baseline;
+    }
+
+    .event-item:last-child {
+        border-bottom: none;
+    }
+
+    .date {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: #0056b3;
+        min-width: 85px;
+        font-size: 15px;
+    }
+
+    .description {
+        color: #333;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    /* DESTAQUES ESPECIAIS (30 Maio e 30 Nov) */
+    .important-alert {
+        background-color: #fff3cd; /* Amarelo suave para destaque */
+        color: #856404;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        border-left: 3px solid #ffc107;
+        width: 100%;
+        display: block;
+    }
+    
+    /* DESTAQUE MÊS AGOSTO */
+    .highlight-month-banner {
+        background-color: #eaf4ff;
+        border: 2px solid #0072C6;
+        color: #004085;
+        padding: 12px;
+        margin: 10px 0;
+        font-weight: 800; /* Extra negrito */
+        text-align: center;
+        border-radius: 4px;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Rodapé */
+    .footer-margin {
+        height: 30px;
+        border-top: 2px solid #eee;
+        margin-top: 20px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .paper-content { padding: 20px; }
+        .header-bar h1 { font-size: 20px; }
+        .event-item { flex-direction: column; }
+        .date { margin-bottom: 4px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="notepad">
+    <div class="header-bar">
+        <h1>Calendário 2026 - Comitê de Área MT</h1>
+    </div>
+
+    <div class="paper-content">
+
+        <div class="month-block">
+            <div class="month-name">Janeiro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">24 JAN</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">29 JAN</span>
+                    <span class="description">1º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Fevereiro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">26 FEV</span>
+                    <span class="description">2º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">28 FEV</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Março</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">26 MAR</span>
+                    <span class="description">3º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">28 MAR</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Abril</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">23 ABR</span>
+                    <span class="description">4º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">25 ABR</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Maio</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">21 MAI</span>
+                    <span class="description">5º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">23 MAI</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">30 MAI</span>
+                    <span class="description important-alert">CAMPANHA “Que Comece por Mim”</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Junho</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">25 JUN</span>
+                    <span class="description">6º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">27 JUN</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Julho</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">23 JUL</span>
+                    <span class="description">7º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">25 JUL</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Agosto</div>
+            <div class="highlight-month-banner">MÊS DO APADRINHAMENTO ALATEEN</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">20 AGO</span>
+                    <span class="description">8º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">22 AGO</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Setembro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">24 SET</span>
+                    <span class="description">9º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">26 SET</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Outubro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">22 OUT</span>
+                    <span class="description">10º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">24 OUT</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Novembro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">26 NOV</span>
+                    <span class="description">11º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">28 NOV</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">30 NOV</span>
+                    <span class="description important-alert">Data Limite: envio da “Despesa Nivelada”</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="month-block">
+            <div class="month-name">Dezembro</div>
+            <div class="event-list">
+                <div class="event-item">
+                    <span class="date">17 DEZ</span>
+                    <span class="description">12º Encontro Grupo de Estudos Al-Anon/Alateen</span>
+                </div>
+                <div class="event-item">
+                    <span class="date">19 DEZ</span>
+                    <span class="description">Reunião Mensal Comitê de Área</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-margin"></div>
+    </div>
+</div>
+
+</body>
+</html>
